@@ -44,7 +44,8 @@ frontend https
     default_backend app_servers
 
 
-backend lasc-backend
+backend app_servers
+        mode http
         balance roundrobin
         server 146345-web-01 100.25.104.16:80 check
         server 146345-web-02 52.91.120.132:80 check
