@@ -37,7 +37,7 @@ frontend http
         bind *:80
         mode http
         option forwardfor
-        redirect scheme https if !{ ssl_fc }
+        redirect scheme https 301 if !{ ssl_fc }
 
 frontend https
     bind *:443 ssl crt /etc/letsencrypt/live/www.olamimagebioro.tech/fullchain.pem
