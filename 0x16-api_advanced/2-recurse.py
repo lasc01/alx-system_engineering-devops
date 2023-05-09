@@ -30,4 +30,5 @@ def recurse(subreddit, hot_list=[], after=None):
         after = "STOP"
     hot_list = hot_list + [post.get('data', {}).get('title')
                            for post in data.get('children', [])]
-    return recurse(subreddit, hot_list, after)
+    return recurse(subreddit, hot_list, afteri, count)
+return hot_list
